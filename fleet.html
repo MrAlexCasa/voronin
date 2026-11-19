@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автопарк | ИП Воронин</title>
+  <meta name="description" content="Собственный автомобильный транспорт: 4 грузовых автомобиля Volvo с открытыми прицепами и 1 тентованный прицеп для доставки грузов.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span>ИП Воронин</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="fleet.html" class="active">Автопарк</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header-phones">
+        <a href="tel:+79039086061">+7 903 908-60-61</a>
+        <a href="tel:+79045714009">+7 904 571-40-09</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 3rem 1.5rem;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+      <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h1>Наш автопарк</h1>
+        <p>Собственный автомобильный транспорт для доставки грузов по Новокузнецку, Кемеровской и Новосибирской областям.</p>
+        <a href="tel:+79039086061" class="btn">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="fleet-stats">
+        <div class="stat-card">
+          <div class="number">4</div>
+          <div class="label">Грузовых автомобиля Volvo</div>
+          <p style="margin-top: 0.75rem; color: var(--text-light); font-size: 0.95rem;">Автомобили оснащены открытыми прицепами для перевозки металлопроката и других грузов.</p>
+        </div>
+        <div class="stat-card">
+          <div class="number">1</div>
+          <div class="label">Тентованный прицеп</div>
+          <p style="margin-top: 0.75rem; color: var(--text-light); font-size: 0.95rem;">Для перевозки грузов, которым требуется укрытие.</p>
+        </div>
+      </div>
+
+      <div class="fleet-gallery">
+        <div class="fleet-item">
+          <img src="images/fleet.avif" alt="4 грузовых автомобиля Volvo с открытыми прицепами">
+          <div class="fleet-item-body">
+            <h4>Автопарк Volvo</h4>
+            <p>4 грузовых автомобиля с открытыми прицепами</p>
+          </div>
+        </div>
+        <div class="fleet-item">
+          <img src="images/volvo.webp" alt="Грузовик Volvo">
+          <div class="fleet-item-body">
+            <h4>Volvo с открытым прицепом</h4>
+            <p>Для перевозки металлопроката и длинномерных грузов</p>
+          </div>
+        </div>
+        <div class="fleet-item">
+          <img src="images/tent.png" alt="Тентованный прицеп">
+          <div class="fleet-item-body">
+            <h4>Тентованный прицеп</h4>
+            <p>Для грузов, требующих защиты от погоды</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contacts" id="contacts">
+    <div class="section-inner">
+      <h2 class="section-title">Контакты</h2>
+      <div class="contacts-grid">
+        <div class="contact-info">
+          <h3>ИП Воронин Виктор Юрьевич</h3>
+          <p><strong>Адрес:</strong> Северное шоссе, 25/17, Новокузнецк</p>
+          <p><strong>Телефоны:</strong><br>
+            <a href="tel:+79039086061">+7 903 908-60-61</a><br>
+            <a href="tel:+79045714009">+7 904 571-40-09</a>
+          </p>
+          <p>Работаем в Новокузнецке, по Кемеровской области и в Новосибирске</p>
+        </div>
+        <div class="map-container">
+          <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=87.13%2C53.75%2C87.17%2C53.77&amp;layer=mapnik&amp;marker=53.76%2C87.15" 
+            loading="lazy"
+            title="Карта — Северное шоссе, 25/17, Новокузнецк">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© ИП Воронин Виктор Юрьевич. Новокузнецк.</p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

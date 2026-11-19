@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги | ИП Воронин</title>
+  <meta name="description" content="Приём, разгрузка, хранение и доставка грузов. Собственный подъездной железнодорожный путь, козловой кран, открытая площадка и автотранспорт.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span>ИП Воронин</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html" class="active">Услуги</a>
+        <a href="fleet.html">Автопарк</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+      <div class="header-phones">
+        <a href="tel:+79039086061">+7 903 908-60-61</a>
+        <a href="tel:+79045714009">+7 904 571-40-09</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 3rem 1.5rem;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+      <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <h1>Приём, разгрузка, хранение и доставка грузов</h1>
+        <p>Комплексные услуги на нашей базе в Новокузнецке</p>
+        <a href="tel:+79039086061" class="btn">Позвонить</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      
+      <article class="service-detail">
+        <img src="images/train.webp" alt="Собственный подъездной железнодорожный путь">
+        <div class="service-detail-content">
+          <h3>Собственный подъездной железнодорожный путь</h3>
+          <p>На территории нашей базы в Новокузнецке расположен собственный подъездной железнодорожный путь вместимостью до 12 вагонов одновременно. Подачу и постановку вагонов организует партнёрская компания. Её представитель самостоятельно связывается с клиентом и согласовывает необходимые вопросы.</p>
+        </div>
+      </article>
+
+      <article class="service-detail">
+        <img src="images/crane.webp" alt="Выгрузка металлопроката">
+        <div class="service-detail-content">
+          <h3>Выгрузка металлопроката</h3>
+          <p>Выполняем разгрузку металлопроката и других грузов из железнодорожных вагонов с использованием собственного козлового крана. После выгрузки груз может быть размещён на открытой площадке нашей базы.</p>
+        </div>
+      </article>
+
+      <article class="service-detail">
+        <img src="images/storage.webp" alt="Открытое хранение грузов">
+        <div class="service-detail-content">
+          <h3>Открытое хранение грузов</h3>
+          <p>Предоставляем открытую площадку для размещения и хранения металлопроката и других грузов на территории нашей базы в Новокузнецке.</p>
+        </div>
+      </article>
+
+      <article class="service-detail">
+        <img src="images/trucks.webp" alt="Автомобильные грузоперевозки">
+        <div class="service-detail-content">
+          <h3>Автомобильные грузоперевозки</h3>
+          <p>Доставляем металлопрокат и другие грузы собственным автотранспортом по Новокузнецку, Кемеровской области и Новосибирску.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section contacts" id="contacts">
+    <div class="section-inner">
+      <h2 class="section-title">Контакты</h2>
+      <div class="contacts-grid">
+        <div class="contact-info">
+          <h3>ИП Воронин Виктор Юрьевич</h3>
+          <p><strong>Адрес:</strong> Северное шоссе, 25/17, Новокузнецк</p>
+          <p><strong>Телефоны:</strong><br>
+            <a href="tel:+79039086061">+7 903 908-60-61</a><br>
+            <a href="tel:+79045714009">+7 904 571-40-09</a>
+          </p>
+          <p>Работаем в Новокузнецке, по Кемеровской области и в Новосибирске</p>
+        </div>
+        <div class="map-container">
+          <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=87.13%2C53.75%2C87.17%2C53.77&amp;layer=mapnik&amp;marker=53.76%2C87.15" 
+            loading="lazy"
+            title="Карта — Северное шоссе, 25/17, Новокузнецк">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© ИП Воронин Виктор Юрьевич. Новокузнецк.</p>
+  </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    burger.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
