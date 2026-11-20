@@ -163,13 +163,15 @@
               required>
           </div>
 
+          <!-- Поле телефона с автоматической маской -->
           <div class="request-field">
             <label for="requestPhone">Телефон *</label>
             <input
               type="tel"
               id="requestPhone"
               name="phone"
-              placeholder="+7 ___ ___-__-__"
+              value="+7"
+              placeholder="+7 (___) ___-__-__"
               autocomplete="tel"
               required>
           </div>
@@ -313,6 +315,68 @@
       link.addEventListener('click', function () {
         nav.classList.remove('open');
       });
+    });
+
+    // Автоматическая маска российского номера
+    const requestPhone = document.getElementById('requestPhone');
+
+    function formatRussianPhone(value) {
+      let digits = value.replace(/\D/g, '');
+
+      if (digits.startsWith('8')) {
+        digits = '7' + digits.slice(1);
+      } else if (!digits.startsWith('7')) {
+        digits = '7' + digits;
+      }
+
+      digits = digits.slice(0, 11);
+
+      let formatted = '+7';
+
+      if (digits.length > 1) {
+        formatted += ' (' + digits.substring(1, 4);
+      }
+
+      if (digits.length >= 4) {
+        formatted += ') ' + digits.substring(4, 7);
+      }
+
+      if (digits.length >= 7) {
+        formatted += '-' + digits.substring(7, 9);
+      }
+
+      if (digits.length >= 9) {
+        formatted += '-' + digits.substring(9, 11);
+      }
+
+      return formatted;
+    }
+
+    requestPhone.addEventListener('input', function () {
+      this.value = formatRussianPhone(this.value);
+    });
+
+    requestPhone.addEventListener('focus', function () {
+      if (!this.value) {
+        this.value = '+7';
+      }
+    });
+
+    requestPhone.addEventListener('blur', function () {
+      if (this.value === '+7' || this.value === '+7 (') {
+        this.value = '+7';
+      }
+    });
+
+    // Проверка полного номера перед отправкой
+    document.getElementById('requestForm').addEventListener('submit', function (event) {
+      const digits = requestPhone.value.replace(/\D/g, '');
+
+      if (digits.length !== 11 || !digits.startsWith('7')) {
+        event.preventDefault();
+        alert('Введите полный российский номер телефона.');
+        requestPhone.focus();
+      }
     });
   </script>
 
