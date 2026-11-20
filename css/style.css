@@ -1,4 +1,6 @@
-/* ИП Воронин - Static recreation of the Wix site */
+
+/* Стили сайта ИП Воронин */
+
 :root {
   --primary: #1a365d;
   --primary-dark: #0f2744;
@@ -444,26 +446,53 @@ a {
   color: #90cdf4;
 }
 
+/* Ссылки на документы в подвале */
+.footer-documents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-documents a {
+  color: #90cdf4;
+  text-decoration: none;
+}
+
+.footer-documents a:hover {
+  text-decoration: underline;
+}
+
 /* Mobile */
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
   }
+
   .hero-image {
     order: -1;
   }
+
   .hero-image img {
     height: 260px;
   }
+
   .service-detail {
     grid-template-columns: 1fr;
   }
+
   .service-detail:nth-child(even) {
     direction: ltr;
   }
+
   .service-detail img {
     height: 240px;
   }
+
   .contacts-grid {
     grid-template-columns: 1fr;
   }
@@ -481,19 +510,24 @@ a {
     padding: 1rem;
     box-shadow: var(--shadow);
   }
+
   .nav.open {
     display: flex;
   }
+
   .burger {
     display: block;
   }
+
   .header-phones {
     display: none;
   }
+
   .header-inner {
     flex-wrap: wrap;
   }
 }
+
 /* Кнопка "Оставить заявку" в шапке */
 .header-request {
   display: inline-flex !important;
@@ -546,148 +580,148 @@ a {
     flex-shrink: 0;
   }
 }
-/* ===== СТИЛЬ БЛОКА ЗАЯВКИ ===== */
 
+/* СТИЛЬ БЛОКА ЗАЯВКИ */
 .request-section {
-    padding: 90px 20px;
-    background: linear-gradient(135deg, #0f2744 0%, #1a365d 100%);
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #0f2744 0%, #1a365d 100%);
 }
 
 .request-section .section-inner {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .request-section .section-title {
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 2.3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2.3rem;
 }
 
 .request-section .section-subtitle {
-    color: #d5deea;
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 40px;
-    line-height: 1.7;
+  color: #d5deea;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
 }
 
 .request-form {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
 }
 
 .request-form-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
 
 .request-field {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 
 .request-field-full {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .request-field label {
-    color: #1a365d;
-    font-size: 0.95rem;
-    font-weight: 600;
+  color: #1a365d;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .request-field input,
 .request-field select,
 .request-field textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px 16px;
-    border: 1px solid #d7dee8;
-    border-radius: 8px;
-    background: #f8fafc;
-    color: #243449;
-    font-family: inherit;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px;
+  border: 1px solid #d7dee8;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #243449;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
 .request-field input,
 .request-field select {
-    min-height: 52px;
+  min-height: 52px;
 }
 
 .request-field textarea {
-    min-height: 120px;
-    resize: vertical;
+  min-height: 120px;
+  resize: vertical;
 }
 
 .request-field input:focus,
 .request-field select:focus,
 .request-field textarea:focus {
-    border-color: #e53e3e;
-    background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
+  border-color: #e53e3e;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.12);
 }
 
 .request-field input::placeholder,
 .request-field textarea::placeholder {
-    color: #9aa6b5;
+  color: #9aa6b5;
 }
 
 .request-submit {
-    display: block;
-    width: 100%;
-    max-width: 340px;
-    min-height: 54px;
-    margin: 30px auto 0;
-    border: none;
-    border-radius: 8px;
-    background: #e53e3e;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  min-height: 54px;
+  margin: 30px auto 0;
+  border: none;
+  border-radius: 8px;
+  background: #e53e3e;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .request-submit:hover {
-    background: #c92f2f;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(229, 62, 62, 0.25);
+  background: #c92f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 62, 62, 0.25);
 }
 
 /* Адаптация для планшетов и телефонов */
 @media (max-width: 700px) {
-    .request-section {
-        padding: 60px 15px;
-    }
+  .request-section {
+    padding: 60px 15px;
+  }
 
-    .request-section .section-title {
-        font-size: 1.8rem;
-    }
+  .request-section .section-title {
+    font-size: 1.8rem;
+  }
 
-    .request-form {
-        padding: 25px 18px;
-        border-radius: 12px;
-    }
+  .request-form {
+    padding: 25px 18px;
+    border-radius: 12px;
+  }
 
-    .request-form-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+  .request-form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-    .request-field-full {
-        grid-column: auto;
-    }
+  .request-field-full {
+    grid-column: auto;
+  }
 
-    .request-submit {
-        max-width: 100%;
-    }
+  .request-submit {
+    max-width: 100%;
+  }
 }
