@@ -317,10 +317,10 @@
       });
     });
 
-    // Автоматическая маска российского номера
+    // Маска телефона с сохранением позиции курсора
     const requestPhone = document.getElementById('requestPhone');
 
-    function formatRussianPhone(value) {
+    function getPhoneDigits(value) {
       let digits = value.replace(/\D/g, '');
 
       if (digits.startsWith('8')) {
@@ -329,31 +329,60 @@
         digits = '7' + digits;
       }
 
-      digits = digits.slice(0, 11);
+      return digits.slice(0, 11);
+    }
 
-      let formatted = '+7';
+    function formatPhone(digits) {
+      let result = '+7';
 
       if (digits.length > 1) {
-        formatted += ' (' + digits.substring(1, 4);
+        result += ' (' + digits.slice(1, 4);
       }
 
       if (digits.length >= 4) {
-        formatted += ') ' + digits.substring(4, 7);
+        result += ') ' + digits.slice(4, 7);
       }
 
       if (digits.length >= 7) {
-        formatted += '-' + digits.substring(7, 9);
+        result += '-' + digits.slice(7, 9);
       }
 
       if (digits.length >= 9) {
-        formatted += '-' + digits.substring(9, 11);
+        result += '-' + digits.slice(9, 11);
       }
 
-      return formatted;
+      return result;
     }
 
     requestPhone.addEventListener('input', function () {
-      this.value = formatRussianPhone(this.value);
+      const oldValue = this.value;
+      const oldCursor = this.selectionStart;
+      const digitsBeforeCursor = oldValue.slice(0, oldCursor).replace(/\D/g, '').length;
+
+      let digits = getPhoneDigits(oldValue);
+      const formatted = formatPhone(digits);
+
+      this.value = formatted;
+
+      let newCursor = formatted.length;
+      let digitCount = 0;
+
+      for (let i = 0; i < formatted.length; i++) {
+        if (/\d/.test(formatted[i])) {
+          digitCount++;
+        }
+
+        if (digitCount >= digitsBeforeCursor) {
+          newCursor = i + 1;
+          break;
+        }
+      }
+
+      if (digitsBeforeCursor === 0) {
+        newCursor = 2;
+      }
+
+      this.setSelectionRange(newCursor, newCursor);
     });
 
     requestPhone.addEventListener('focus', function () {
@@ -362,13 +391,7 @@
       }
     });
 
-    requestPhone.addEventListener('blur', function () {
-      if (this.value === '+7' || this.value === '+7 (') {
-        this.value = '+7';
-      }
-    });
-
-    // Проверка полного номера перед отправкой
+    // Проверка номера перед отправкой
     document.getElementById('requestForm').addEventListener('submit', function (event) {
       const digits = requestPhone.value.replace(/\D/g, '');
 
