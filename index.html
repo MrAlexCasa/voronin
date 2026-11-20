@@ -142,7 +142,7 @@
         <input type="hidden" name="_subject" value="Новая заявка с сайта ИП Воронин">
         <input type="hidden" name="_template" value="table">
 
-        <!-- Скрытое поле защиты от спам-ботов -->
+        <!-- Защита от спам-ботов -->
         <input
           type="text"
           name="_honey"
@@ -205,6 +205,25 @@
 
         </div>
 
+        <!-- Согласие на обработку персональных данных -->
+        <div style="margin: 1.5rem 0; font-size: 0.9rem; line-height: 1.5;">
+          <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+            <input
+              type="checkbox"
+              name="personal_data_consent"
+              value="Согласен на обработку персональных данных"
+              required
+              style="margin-top: 4px; flex-shrink: 0;">
+            <span>
+              Я даю согласие ИП Воронину Виктору Юрьевичу на обработку моих персональных данных
+              в соответствии с
+              <a href="privacy.html" target="_blank" rel="noopener noreferrer">
+                Политикой обработки персональных данных
+              </a>.
+            </span>
+          </label>
+        </div>
+
         <button type="submit" class="btn request-submit">
           Заказать обратный звонок
         </button>
@@ -220,12 +239,21 @@
       <div class="contacts-grid">
         <div class="contact-info">
           <h3>ИП Воронин Виктор Юрьевич</h3>
-          <p><strong>Адрес:</strong> Северное шоссе, 25/17, Новокузнецк</p>
+
+          <p><strong>Фактический адрес:</strong> Северное шоссе, 25/17, Новокузнецк</p>
 
           <p><strong>Телефоны:</strong><br>
             <a href="tel:+79039086061">+7 903 908-60-61</a><br>
             <a href="tel:+79045714009">+7 904 571-40-09</a>
           </p>
+
+          <p><strong>Электронная почта:</strong><br>
+            <a href="mailto:baza.voronin@mail.ru">baza.voronin@mail.ru</a>
+          </p>
+
+          <p><strong>ИНН:</strong> 422001737933</p>
+          <p><strong>ОГРНИП:</strong> 317420500059207</p>
+          <p><strong>ЭДО ID:</strong> 2BE04240ea8e4124ed7bec690ec55649de0</p>
 
           <p>Работаем в Новокузнецке, по Кемеровской области и в Новосибирске</p>
 
@@ -247,7 +275,12 @@
 
   <footer class="footer">
     <p>© ИП Воронин Виктор Юрьевич. Новокузнецк.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Сайт подготовлен для размещения на GitHub Pages.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+      <a href="privacy.html">Политика обработки персональных данных</a>
+    </p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+      Сайт подготовлен для размещения на GitHub Pages.
+    </p>
   </footer>
 
   <script>
