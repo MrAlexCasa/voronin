@@ -1,3 +1,4 @@
+
 /* Стили сайта ИП Воронин */
 
 :root {
@@ -386,30 +387,33 @@ a {
 /* Contacts */
 .contacts {
   background: var(--primary);
-@@ -396,11 +11,17 @@ a {
+  color: var(--white);
+}
+
+.contacts .section-title {
+  color: var(--white);
+}
 
 .contacts-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 2.5rem;
   align-items: start;
-}
-
-.contact-info {
-  min-width: 0;
-  overflow-wrap: anywhere;
-  word-break: normal;
 }
 
 .contact-info h3 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
-@@ -414,314 +35,56 @@ a {
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+}
+
 .contact-info a {
   color: #90cdf4;
   font-weight: 600;
-  overflow-wrap: anywhere;
 }
 
 .contact-info a:hover {
@@ -417,9 +421,6 @@ a {
 }
 
 .map-container {
-  width: 100%;
-  min-width: 0;
-  height: 450px;
   border-radius: var(--radius);
   overflow: hidden;
   height: 320px;
@@ -427,7 +428,6 @@ a {
 }
 
 .map-container iframe {
-  display: block;
   width: 100%;
   height: 100%;
   border: 0;
@@ -468,7 +468,6 @@ a {
 }
 
 /* Mobile */
-/* Адаптация контактов для планшетов и телефонов */
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -496,7 +495,6 @@ a {
 
   .contacts-grid {
     grid-template-columns: 1fr;
-    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
 }
@@ -512,8 +510,6 @@ a {
     flex-direction: column;
     padding: 1rem;
     box-shadow: var(--shadow);
-  .contact-info {
-    width: 100%;
   }
 
   .nav.open {
@@ -530,6 +526,12 @@ a {
 
   .header-inner {
     flex-wrap: wrap;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
   .map-container {
     height: 350px;
   }
@@ -722,20 +724,27 @@ a {
   .request-form-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .request-field-full {
+    grid-column: auto;
+  }
+
+  .request-submit {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .contacts {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  .request-field-full {
-    grid-column: auto;
   .map-container {
     height: 300px;
   }
 
-  .request-submit {
-    max-width: 100%;
   .contact-info {
     font-size: 0.95rem;
   }
