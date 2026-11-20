@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,21 +9,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
         <span>ИП Воронин</span>
       </a>
+
       <nav class="nav" id="nav">
         <a href="index.html" class="active">Главная</a>
         <a href="services.html">Услуги</a>
         <a href="fleet.html">Автопарк</a>
         <a href="#contacts">Контакты</a>
       </nav>
+
       <div class="header-phones">
         <a href="tel:+79039086061">+7 903 908-60-61</a>
         <a href="tel:+79045714009">+7 904 571-40-09</a>
       </div>
+
+      <button class="header-request btn" id="openRequest">
+        Оставить заявку
+      </button>
+
       <button class="burger" id="burger" aria-label="Меню">☰</button>
     </div>
   </header>
@@ -32,13 +41,16 @@
       <div class="hero-content">
         <h1>ИП Воронин — услуги разгрузки вагонов, хранение на открытой площадке и перевозка грузов</h1>
         <p>Организуем приём железнодорожных грузов в Новокузнецке, выполняем выгрузку металлопроката и других грузов, обеспечиваем хранение на открытой площадке и автомобильную доставку.</p>
+
         <div class="hero-features">
           <span>Собственный подъездной путь</span>
           <span>Козловой кран</span>
           <span>Собственный автотранспорт</span>
         </div>
+
         <a href="services.html" class="btn">Подробнее об услугах</a>
       </div>
+
       <div class="hero-image">
         <img src="images/crane.webp" alt="Козловой кран и железнодорожные вагоны">
       </div>
@@ -49,7 +61,7 @@
     <div class="section-inner">
       <h2 class="section-title">Наши услуги</h2>
       <p class="section-subtitle">Комплексная работа с грузами: приём железнодорожных вагонов, выгрузка, хранение на открытой площадке и автомобильная доставка.</p>
-      
+
       <div class="services-grid">
         <article class="service-card">
           <img src="images/train.webp" alt="Приём железнодорожных вагонов">
@@ -58,6 +70,7 @@
             <p>Собственный подъездной путь вместимостью до 12 вагонов. Подача и постановка вагонов организована партнёрской компанией.</p>
           </div>
         </article>
+
         <article class="service-card">
           <img src="images/pipes.webp" alt="Выгрузка металлопроката">
           <div class="service-card-body">
@@ -65,6 +78,7 @@
             <p>Разгрузка с использованием собственного козлового крана. После выгрузки груз может быть размещён на открытой площадке.</p>
           </div>
         </article>
+
         <article class="service-card">
           <img src="images/storage.webp" alt="Хранение на открытой площадке">
           <div class="service-card-body">
@@ -72,6 +86,7 @@
             <p>Предоставляем место для хранения металлопроката и других грузов на открытой территории нашей базы в Новокузнецке.</p>
           </div>
         </article>
+
         <article class="service-card">
           <img src="images/trucks.webp" alt="Автомобильная доставка">
           <div class="service-card-body">
@@ -80,7 +95,7 @@
           </div>
         </article>
       </div>
-      
+
       <div style="text-align: center; margin-top: 2.5rem;">
         <a href="services.html" class="btn">Все услуги подробнее</a>
       </div>
@@ -91,18 +106,19 @@
     <div class="section-inner">
       <h2 class="section-title">Наш автопарк</h2>
       <p class="section-subtitle">Для доставки грузов используем собственный автомобильный транспорт: 4 грузовых автомобиля Volvo с открытыми прицепами и 1 тентованный прицеп.</p>
-      
+
       <div class="fleet-stats">
         <div class="stat-card">
           <div class="number">4</div>
           <div class="label">Грузовых автомобиля Volvo</div>
         </div>
+
         <div class="stat-card">
           <div class="number">1</div>
           <div class="label">Тентованный прицеп</div>
         </div>
       </div>
-      
+
       <div style="text-align: center;">
         <a href="fleet.html" class="btn">Посмотреть автопарк</a>
       </div>
@@ -112,23 +128,27 @@
   <section class="section contacts" id="contacts">
     <div class="section-inner">
       <h2 class="section-title">Контакты</h2>
+
       <div class="contacts-grid">
         <div class="contact-info">
           <h3>ИП Воронин Виктор Юрьевич</h3>
           <p><strong>Адрес:</strong> Северное шоссе, 25/17, Новокузнецк</p>
+
           <p><strong>Телефоны:</strong><br>
             <a href="tel:+79039086061">+7 903 908-60-61</a><br>
             <a href="tel:+79045714009">+7 904 571-40-09</a>
           </p>
+
           <p>Работаем в Новокузнецке, по Кемеровской области и в Новосибирске</p>
+
           <p style="margin-top: 1.5rem;">
             <a href="tel:+79039086061" class="btn">Позвонить</a>
           </p>
         </div>
+
         <div class="map-container">
-          <!-- OpenStreetMap embed for Северное шоссе 25/17, Новокузнецк -->
-          <iframe 
-            src="https://www.openstreetmap.org/export/embed.html?bbox=87.13%2C53.75%2C87.17%2C53.77&amp;layer=mapnik&amp;marker=53.76%2C87.15" 
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=87.13%2C53.75%2C87.17%2C53.77&amp;layer=mapnik&amp;marker=53.76%2C87.15"
             loading="lazy"
             title="Карта — Северное шоссе, 25/17, Новокузнецк">
           </iframe>
@@ -139,13 +159,7 @@
 
   <footer class="footer">
     <p>© ИП Воронин Виктор Юрьевич. Новокузнецк.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Сайт подготовлен для размещения на GitHub Pages. Оригинал создан на Wix.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Сайт подготовлен для размещения на GitHub Pages.</p>
   </footer>
 
-  <script>
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav');
-    burger.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
-</body>
-</html>
+  <!-- Всплывающая
